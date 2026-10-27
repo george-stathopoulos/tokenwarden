@@ -1,0 +1,14 @@
+.git
+.gitignore
+.distignore
+.claude
+node_modules
+tests
+dev
+dist
+bin
+package-lock.json
+*.md
+.DS_Store
+docs
+.wordpress-org

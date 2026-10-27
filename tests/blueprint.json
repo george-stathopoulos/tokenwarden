@@ -1,0 +1,26 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "ai-provider-for-anthropic"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "activatePlugin",
+      "pluginPath": "tokenwarden/tokenwarden.php"
+    },
+    {
+      "step": "activatePlugin",
+      "pluginPath": "demo-caller/demo-caller.php"
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php require '/tests/run.php';"
+    }
+  ]
+}

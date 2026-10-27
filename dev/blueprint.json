@@ -1,0 +1,37 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"landingPage": "/wp-admin/admin.php?page=tokenwarden",
+	"login": true,
+	"steps": [
+		{
+			"step": "setSiteOptions",
+			"options": {
+				"blogname": "Northwind Coffee Roasters"
+			}
+		},
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "wordpress.org/plugins",
+				"slug": "ai-provider-for-anthropic"
+			},
+			"options": {
+				"activate": true
+			}
+		},
+		{
+			"step": "defineWpConfigConsts",
+			"consts": {
+				"ANTHROPIC_API_KEY": "sk-ant-FAKE-LOCAL-DEV-KEY"
+			}
+		},
+		{
+			"step": "activatePlugin",
+			"pluginPath": "tokenwarden/tokenwarden.php"
+		},
+		{
+			"step": "wp-cli",
+			"command": "wp tokenwarden seed --days=95"
+		}
+	]
+}

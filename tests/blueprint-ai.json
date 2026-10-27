@@ -1,0 +1,10 @@
+{
+  "steps": [
+    { "step": "installPlugin", "pluginData": { "resource": "wordpress.org/plugins", "slug": "ai-provider-for-anthropic" }, "options": { "activate": true } },
+    { "step": "installPlugin", "pluginData": { "resource": "wordpress.org/plugins", "slug": "ai" }, "options": { "activate": true } },
+    { "step": "setSiteOptions", "options": { "wpai_features_enabled": "1", "wpai_feature_connector-approval_enabled": "1" } },
+    { "step": "activatePlugin", "pluginPath": "tokenwarden/tokenwarden.php" },
+    { "step": "activatePlugin", "pluginPath": "demo-caller/demo-caller.php" },
+    { "step": "runPHP", "code": "<?php require '/tests/compat-ai.php';" }
+  ]
+}

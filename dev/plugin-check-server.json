@@ -1,0 +1,20 @@
+{
+  "landingPage": "/wp-admin/tools.php?page=plugin-check",
+  "login": true,
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "plugin-check"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "activatePlugin",
+      "pluginPath": "tokenwarden/tokenwarden.php"
+    }
+  ]
+}

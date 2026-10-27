@@ -1,0 +1,7 @@
+node_modules/
+dist/
+tests/out/
+dev/out/
+.DS_Store
+website/dist/
+docs/tokenwarden-docs.html

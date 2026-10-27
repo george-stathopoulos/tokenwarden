@@ -1,0 +1,7 @@
+{
+  "steps": [
+    { "step": "installPlugin", "pluginData": { "resource": "wordpress.org/plugins", "slug": "plugin-check" }, "options": { "activate": true } },
+    { "step": "activatePlugin", "pluginPath": "tokenwarden/tokenwarden.php" },
+    { "step": "wp-cli", "command": "wp plugin check tokenwarden --format=json" }
+  ]
+}

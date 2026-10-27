@@ -1,0 +1,7 @@
+{
+  "steps": [
+    { "step": "activatePlugin", "pluginPath": "tokenwarden/tokenwarden.php" },
+    { "step": "wp-cli", "command": "wp tokenwarden seed --days=45" },
+    { "step": "runPHP", "code": "<?php require '/dev/smoke.php';" }
+  ]
+}
